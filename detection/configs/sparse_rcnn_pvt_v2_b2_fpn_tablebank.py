@@ -152,4 +152,4 @@ log_config = dict(
         dict(type='TensorboardLoggerHook')
     ])
 
-resume_from = './work_dirs/sparse_rcnn_pvt_v2_b2_fpn_tablebank'
+# resume_from = './work_dirs/sparse_rcnn_pvt_v2_b2_fpn_tablebank'
