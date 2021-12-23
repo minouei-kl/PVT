@@ -84,7 +84,7 @@ model = dict(
     test_cfg=dict(rpn=None, rcnn=dict(max_per_img=num_proposals)))
 
 # optimizer
-optimizer = dict(_delete_=True, type='AdamW', lr=0.0001 / 1.4, weight_decay=0.0001)
+optimizer = dict(_delete_=True, type='AdamW', lr=0.0001, weight_decay=0.0001)
 optimizer_config = dict(_delete_=True, grad_clip=dict(max_norm=1, norm_type=2))
 # learning policy
 img_norm_cfg = dict(
@@ -152,4 +152,3 @@ log_config = dict(
         dict(type='TensorboardLoggerHook')
     ])
 
-# resume_from = './work_dirs/sparse_rcnn_pvt_v2_b2_fpn_tablebank'
