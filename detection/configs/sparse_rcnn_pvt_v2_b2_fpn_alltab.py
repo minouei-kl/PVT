@@ -84,7 +84,7 @@ model = dict(
     test_cfg=dict(rpn=None, rcnn=dict(max_per_img=num_proposals)))
 
 # optimizer
-optimizer = dict(_delete_=True, type='AdamW', lr=0.0001 / 1.4, weight_decay=0.0001)
+optimizer = dict(_delete_=True, type='AdamW', lr=0.0001, weight_decay=0.0001)
 optimizer_config = dict(_delete_=True, grad_clip=dict(max_norm=1, norm_type=2))
 # learning policy
 img_norm_cfg = dict(
@@ -143,8 +143,8 @@ data = dict(
         ann_file='/netscratch/minouei/alltables/testmerge.json',
         img_prefix='/netscratch/minouei/alltables/images/',
         pipeline=test_pipeline))
-lr_config = dict(policy='step', step=[3, 5])
-runner = dict(type='EpochBasedRunner', max_epochs=6)
+lr_config = dict(policy='step', step=[1, 2])
+runner = dict(type='EpochBasedRunner', max_epochs=3)
 log_config = dict(
     interval=150,
     hooks=[
