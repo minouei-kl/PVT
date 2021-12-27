@@ -175,14 +175,8 @@ lr_config = dict(
     warmup='linear',
     warmup_iters=1000,warmup_ratio=1.0 / 1000,
     step=[1, 2])
+
 runner = dict(type='EpochBasedRunner', max_epochs=1)
-log_config = dict(
-    interval=150,
-    hooks=[
-        dict(type='TextLoggerHook'),
-        dict(type='TensorboardLoggerHook')
-    ])
-runner = dict(type='EpochBasedRunner', max_epochs=3)
 checkpoint_config = dict(interval=1)
 log_config = dict(
     interval=150,
