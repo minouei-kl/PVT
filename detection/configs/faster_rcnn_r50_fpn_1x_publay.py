@@ -182,7 +182,7 @@ log_config = dict(
         dict(type='TextLoggerHook'),
         dict(type='TensorboardLoggerHook')
     ])
-runner = dict(type='EpochBasedRunner', max_epochs=3)
+runner = dict(type='EpochBasedRunner', max_epochs=1)
 checkpoint_config = dict(interval=1)
 log_config = dict(
     interval=150,
