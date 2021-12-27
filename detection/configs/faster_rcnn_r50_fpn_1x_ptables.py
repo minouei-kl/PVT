@@ -105,9 +105,7 @@ dataset_type = 'CocoDataset'
 data_root = 'data/coco/'
 
 
-# optimizer
-optimizer = dict(_delete_=True, type='AdamW', lr=0.00001, weight_decay=0.0001)
-optimizer_config = dict(_delete_=True, grad_clip=dict(max_norm=1, norm_type=2))
+
 # learning policy
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
