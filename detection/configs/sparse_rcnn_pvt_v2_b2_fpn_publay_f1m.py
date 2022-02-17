@@ -151,4 +151,4 @@ log_config = dict(
         dict(type='TensorboardLoggerHook')
     ])
 
-load_from = './work_dirs/faster_rcnn_r50_fpn_1x_justpub1m/epoch_3.pth'
+load_from = './work_dirs/sparse_rcnn_pvt_v2_b2_fpn_justpub1m/epoch_3.pth'
